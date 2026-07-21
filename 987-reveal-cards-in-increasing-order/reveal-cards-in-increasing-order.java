@@ -8,19 +8,19 @@ class Solution {
 
         Queue<Integer> q = new LinkedList<>();
 
-        // Store indices
+        
         for (int i = 0; i < n; i++) {
-            q.offer(i);
+            q.add(i);
         }
 
-        // Place cards
+       
         for (int i = 0; i < n; i++) {
 
             int index = q.poll();
             ans[index] = deck[i];
 
             if (!q.isEmpty()) {
-                q.offer(q.poll());
+                q.add(q.poll());
             }
         }
 
